@@ -1,28 +1,30 @@
 <template>
-  <div class="apartment">
-    <img v-bind:src="asset.images[asset.currentImage].src" alt="" />
-    <div class="buttonGroup">
-      <button class="next" @click="next" :disabled="asset.currentImage === 0">
-        Prev
-      </button>
-      <button
-        class="prev"
-        @click="prev"
-        :disabled="asset.currentImage === asset.images.length - 1"
-      >
-        Next
-      </button>
+  <router-link :to="{ name: 'AssetPage', params: { id: asset.id } }">
+    <div class="apartment">
+      <img v-bind:src="asset.images[asset.currentImage].src" alt="" />
+      <div class="buttonGroup">
+        <button class="next" @click="next" :disabled="asset.currentImage === 0">
+          Prev
+        </button>
+        <button
+          class="prev"
+          @click="prev"
+          :disabled="asset.currentImage === asset.images.length - 1"
+        >
+          Next
+        </button>
+      </div>
+      <div class="swipes"></div>
+      <h3>{{ asset.title }}</h3>
+      <h5>{{ asset.location }}</h5>
+      <p>
+        Share Price: {{ asset.sharePrice }} - Rental return:
+        {{ asset.rentalReturn }}%
+      </p>
+      <button class="buy">Buy share</button>
+      <button class="learn">Learn More >></button>
     </div>
-    <div class="swipes"></div>
-    <h3>{{ asset.title }}</h3>
-    <h5>{{ asset.location }}</h5>
-    <p>
-      Share Price: {{ asset.sharePrice }} - Rental return:
-      {{ asset.rentalReturn }}%
-    </p>
-    <button class="buy">Buy share</button>
-    <button class="learn">Learn More >></button>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -70,21 +72,6 @@ export default {
   box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
   cursor: pointer;
 }
-.flashMessage {
-  padding: 16px;
-  background-color: green;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: fit-content;
-  justify-content: center;
-  color: white;
-  margin-right: 40px;
-  margin-left: 40px;
-  transition: opacity 1s ease-in-out;
-  position: absolute;
-  bottom: 100px;
-}
 .buy {
   padding: 16px;
   margin-top: 16px;
@@ -103,23 +90,5 @@ export default {
   border-radius: 8px;
   font-size: 18px;
   background-color: #e2e6e9;
-}
-h4 {
-  font-size: 19px;
-  margin: 0px;
-  margin-bottom: 16px;
-}
-img {
-  width: 100%;
-  height: 300px;
-}
-h3 {
-  font-size: 25px;
-  margin: 0px;
-  margin-bottom: 4px;
-}
-p {
-  font-size: 18px;
-  margin: 0px;
 }
 </style>
