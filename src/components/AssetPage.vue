@@ -8,12 +8,12 @@
     <h1>{{ asset.rentalReturn }}</h1>
     <img v-bind:src="asset.images[asset.currentImage].src" alt="" />
     <div class="buttonGroup">
-      <button class="next" @click="next" :disabled="asset.currentImage === 0">
+      <button class="prev" @click="prev" :disabled="asset.currentImage === 0">
         Prev
       </button>
       <button
-        class="prev"
-        @click="prev"
+        class="next"
+        @click="next"
         :disabled="asset.currentImage === asset.images.length - 1"
       >
         Next
@@ -40,6 +40,25 @@ export default {
         this.asset = response.data;
       })
       .catch((err) => console.log(err));
+  },
+  methods: {
+    prev() {
+      if (this.$props.asset.currentImage > 0) {
+        this.$props.asset.currentImage--;
+      } else {
+        this.$props.asset.currentImage = 0;
+      }
+    },
+    next() {
+      if (
+        this.$props.asset.currentImage <
+        this.$props.asset.images.length - 1
+      ) {
+        this.$props.asset.currentImage++;
+      } else {
+        this.$props.asset.currentImage = 0;
+      }
+    },
   },
 };
 </script>
