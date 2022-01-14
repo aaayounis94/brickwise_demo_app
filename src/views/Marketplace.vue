@@ -14,6 +14,7 @@ export default {
   components: {
     Asset,
   },
+  props: ["page"],
   data() {
     return {
       assets: null,
@@ -21,7 +22,7 @@ export default {
   },
   created() {
     assetServices
-      .getAssets()
+      .getAssets(2, this.page)
       .then((response) => {
         console.log(response.data);
         this.assets = response.data;

@@ -218,6 +218,55 @@
       "createdAt": "2021-11-30T21:26:18.421Z",
       "updatedAt": "2022-01-09T09:40:24.132Z",
       "__v": 0
+    },
+    {
+      "center": {
+        "lat": 46.621171,
+        "lng": 14.2661673
+      },
+      "currentImage": 0,
+      "_id": "61a696fa6f8635fc4b333a84",
+      "id": "AT00005V3",
+      "title": "Wohnung im Grüne, Währing",
+      "location": "Wien, Österreich",
+      "address": "Währinger straße 139, Wien, 1180",
+      "postalCode": "1180",
+      "stage": "primary",
+      "url": "https://bwrealestate.app.brickwise.at",
+      "rentalReturn": 4.15,
+      "sharePrice": 120.02,
+      "bricks": 3600,
+      "availableBricks": 1689,
+      "rentalPaymentDate": 15,
+      "campaignDate": "15/01/2022",
+      "images": [
+        {
+          "_id": "61b229b757431321468f6",
+          "src": "https://cdn.brickwise.at/557c0021-da6f-4bea-b0cd-b440021da7b1.jpg"
+        },
+        {
+          "_id": "61b229b7574313a3998f7",
+          "src": "https://cdn.brickwise.at/9ee571fb-5fec-48ff-82fd-2db86af93769.jpg"
+        },
+        {
+          "_id": "61b229b757431323998f8",
+          "src": "https://cdn.brickwise.at/1e547902-a465-43c9-9d92-7c833c4f9147.jpg"
+        },
+        {
+          "_id": "61b229b7574313633998f9",
+          "src": "https://cdn.brickwise.at/d4ccd62c-258e-4fad-9fcd-35ba9029a5cf.jpg"
+        },
+        {
+          "_id": "61b229b75743137cbb3fa",
+          "src": "https://cdn.brickwise.at/5ed9c1a5-d186-4a24-8abe-9a43048af0e7.jpg"
+        }
+      ],
+      "ISIN": "AT0000A2U5V3",
+      "investmentConditionsUrl": "https://cdn.brickwise.at/99516b4f-7dc8-440b-b125-41046a1249ef.pdf",
+      "testing": false,
+      "createdAt": "2021-11-30T21:26:18.421Z",
+      "updatedAt": "2022-01-09T09:40:24.132Z",
+      "__v": 0
     }
   ]
 }

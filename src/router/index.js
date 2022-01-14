@@ -6,6 +6,9 @@ const routes = [
   {
     path: "/",
     name: "Marketplace",
+    props: (route) => {
+      parseInt(route.query.page) || 0;
+    },
     component: Marketplace,
   },
   {

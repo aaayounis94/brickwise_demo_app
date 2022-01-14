@@ -8,10 +8,12 @@ const apiClient = axios.create({
   },
 });
 export default {
-  getAssets() {
-    return apiClient.get("/assets");
+  getAssets(perPage, page) {
+    return apiClient.get("/assets?_limit" + perPage + "&page=" + page);
   },
   getAsset(id) {
     return apiClient.get("/assets/" + id);
   },
+  nextPage() {},
+  prevPage() {},
 };

@@ -16,7 +16,7 @@
     </div>
     <div class="chart">
       <div v-for="bar in bars" :key="bar.val" class="bar">
-        <p class="val">{{ bar.val }}</p>
+        <small class="val">{{ bar.val }}</small>
         <div class="line" :style="{ height: bar.height + 'px' }"></div>
         <div class="divider"></div>
         <p class="date">{{ bar.date }} 2021</p>
@@ -122,12 +122,9 @@ export default {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-.small {
-  font-size: 16px;
-}
 .line {
   background-color: lightcoral;
-  width: 8px;
+  width: 24px;
   min-height: 10px;
   transition: height 2s ease-in-out;
 }
@@ -138,11 +135,7 @@ export default {
   align-items: center;
   justify-items: center;
 }
-.date {
-  padding-left: 16px;
-  color: #757575;
-  font-size: 14px;
-}
+
 .chart {
   margin-bottom: 24px;
   margin-top: 16px;
@@ -173,5 +166,14 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+small {
+  display: none;
+}
+.bar:hover + small {
+  padding-left: 16px;
+  color: #757575;
+  font-size: 14px;
+  display: block;
 }
 </style>

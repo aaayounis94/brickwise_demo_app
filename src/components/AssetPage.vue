@@ -1,23 +1,21 @@
 <template>
-  <div v-if="asset">
+  <div v-if="asset" class="asset">
     <h1>{{ asset.title }}</h1>
     <h4>{{ asset.address }}, {{ asset.location }}, {{ asset.postalCode }}</h4>
-    <p>Share Price</p>
-    <h1>{{ asset.sharePrice }}</h1>
-    <p>ROI</p>
-    <h1>{{ asset.rentalReturn }}</h1>
-    <img v-bind:src="asset.images[asset.currentImage].src" alt="" />
-    <div class="buttonGroup">
-      <button class="prev" @click="prev" :disabled="asset.currentImage === 0">
-        Prev
-      </button>
-      <button
-        class="next"
-        @click="next"
-        :disabled="asset.currentImage === asset.images.length - 1"
-      >
-        Next
-      </button>
+    <div class="assetData">
+      <div class="metric">
+        <p>Share Price</p>
+        <h1>{{ asset.sharePrice }}</h1>
+      </div>
+      <div class="metric">
+        <p>ROI</p>
+        <h1>{{ asset.rentalReturn }}</h1>
+      </div>
+    </div>
+    <div class="gallery">
+      <div v-for="image in asset.images" :key="image.id">
+        <img :src="image.src" />
+      </div>
     </div>
   </div>
 </template>
@@ -43,24 +41,53 @@ export default {
   },
   methods: {
     prev() {
-      if (this.$props.asset.currentImage > 0) {
-        this.$props.asset.currentImage--;
+      if (this.asset.currentImage > 0) {
+        this.asset.currentImage--;
       } else {
-        this.$props.asset.currentImage = 0;
+        this.asset.currentImage = 0;
       }
     },
     next() {
-      if (
-        this.$props.asset.currentImage <
-        this.$props.asset.images.length - 1
-      ) {
-        this.$props.asset.currentImage++;
+      if (this.asset.currentImage < this.asset.images.length - 1) {
+        this.asset.currentImage++;
       } else {
-        this.$props.asset.currentImage = 0;
+        this.asset.currentImage = 0;
       }
     },
   },
 };
 </script>
-
-<style scoped></style>
+<style scoped>
+.asset {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.assetData {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+p {
+  margin-bottom: 0px;
+}
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+}
+</style>
