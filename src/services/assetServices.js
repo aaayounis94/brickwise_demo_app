@@ -7,13 +7,13 @@ const apiClient = axios.create({
     "Content-Type": "application/json",
   },
 });
+///// lesson 1 Routing
+// to make the pagination  work we nedd to pass the API call a limit per page and a query param equal to the current page
 export default {
   getAssets(perPage, page) {
-    return apiClient.get("/assets?_limit" + perPage + "&page=" + page);
+    return apiClient.get("/assets?_limit=" + perPage + "&_page=" + page);
   },
   getAsset(id) {
     return apiClient.get("/assets/" + id);
   },
-  nextPage() {},
-  prevPage() {},
 };

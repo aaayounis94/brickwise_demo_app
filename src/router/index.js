@@ -1,15 +1,29 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Marketplace from "../views/Marketplace.vue";
 import Portfolio from "../views/Portfolio.vue";
-import AssetPage from "../components/AssetPage.vue";
+import AssetPage from "../views/AssetViews/AssetPage.vue";
+import edit from "../views/AssetViews/edit.vue";
+import register from "../views/AssetViews/register.vue";
+import layout from "../views/AssetViews/layout.vue";
 const routes = [
   {
-    path: "/",
+    path: "/marketplace",
     name: "Marketplace",
-    props: (route) => {
-      parseInt(route.query.page) || 0;
-    },
+    ///// lesson 1 Routing
+    // then we need to specify this page as a parameter that we will give to the router
+    // if there is no page just set the current page to 1
+    props: (route) => ({
+      page: parseInt(route.query.page) || 1,
+    }),
     component: Marketplace,
+  },
+  {
+    path: "/",
+    redirect: { name: "Marketplace" },
+  },
+  {
+    path: "/home",
+    redirect: { name: "Marketplace" },
   },
   {
     path: "/portfolio",
@@ -21,9 +35,26 @@ const routes = [
   },
   {
     path: "/asset/:id",
-    name: "AssetPage",
+    name: "layout",
     props: true,
-    component: AssetPage,
+    component: layout,
+    children: [
+      {
+        path: "",
+        name: "AssetPage",
+        component: AssetPage,
+      },
+      {
+        path: "register",
+        name: "register",
+        component: register,
+      },
+      {
+        path: "edit",
+        name: "edit",
+        component: edit,
+      },
+    ],
   },
 ];
 const router = createRouter({

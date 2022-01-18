@@ -21,40 +21,8 @@
 </template>
 
 <script>
-import assetServices from "../services/assetServices.js";
 export default {
-  props: ["id"],
-  data() {
-    return {
-      asset: null,
-    };
-  },
-  // when the component is created fetsh the event data with ID
-  created() {
-    assetServices
-      .getAsset(this.id)
-      .then((response) => {
-        console.log(response.data);
-        this.asset = response.data;
-      })
-      .catch((err) => console.log(err));
-  },
-  methods: {
-    prev() {
-      if (this.asset.currentImage > 0) {
-        this.asset.currentImage--;
-      } else {
-        this.asset.currentImage = 0;
-      }
-    },
-    next() {
-      if (this.asset.currentImage < this.asset.images.length - 1) {
-        this.asset.currentImage++;
-      } else {
-        this.asset.currentImage = 0;
-      }
-    },
-  },
+  props: ["asset"],
 };
 </script>
 <style scoped>
