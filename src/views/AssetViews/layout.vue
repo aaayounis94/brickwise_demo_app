@@ -26,7 +26,19 @@ export default {
         console.log(response.data);
         this.asset = response.data;
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (err.response & (err.response.status === "404")) {
+          this.router.push({
+            name: "NotFound",
+            params: { resource: "property" },
+          });
+        } else {
+          this.$router.push({
+            name: "NetworkError",
+          });
+        }
+        console.error(err);
+      });
   },
 };
 </script>

@@ -5,6 +5,8 @@ import AssetPage from "../views/AssetViews/AssetPage.vue";
 import edit from "../views/AssetViews/edit.vue";
 import register from "../views/AssetViews/register.vue";
 import layout from "../views/AssetViews/layout.vue";
+import NotFound from "../views/NotFound.vue";
+import NetworkError from "../views/NetworkError.vue";
 const routes = [
   {
     path: "/marketplace",
@@ -55,6 +57,24 @@ const routes = [
         component: edit,
       },
     ],
+  },
+  {
+    // this catches all routes that doesn't match an existing route
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
+  },
+  // we need to call this path when the url fails
+  {
+    path: "/404/:resource",
+    props: true,
+    component: NotFound,
+    name: "NotFound",
+  },
+  {
+    path: "/network-error",
+    name: "NetworkError",
+    component: NetworkError,
   },
 ];
 const router = createRouter({

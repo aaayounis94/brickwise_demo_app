@@ -5,7 +5,11 @@
   </div>
   <router-view />
 </template>
-
+<script>
+export default {
+  inject: ["GlobalStore"],
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
