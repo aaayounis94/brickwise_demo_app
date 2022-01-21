@@ -1,4 +1,7 @@
 <template>
+  <div class="flashMessage" v-if="GlobalStore.flashMessage">
+    {{ GlobalStore.flashMessage }}
+  </div>
   <div id="nav">
     <router-link :to="{ name: 'Marketplace' }">Marketplace</router-link> |
     <router-link :to="{ name: 'Portfolio' }">Portfolio</router-link>
@@ -18,7 +21,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
+.flashMessage {
+  background-color: #42b983;
+}
 #nav {
   padding: 30px;
 }
