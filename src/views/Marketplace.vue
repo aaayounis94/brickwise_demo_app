@@ -15,7 +15,6 @@
         prev page</router-link
       >
       <router-link
-        v-if="hasNextPage"
         :to="{ name: 'Marketplace', query: { page: page + 1 } }"
         id="page-next"
       >
@@ -28,8 +27,6 @@
 <script>
 // @ is an alias to /src
 import Asset from "@/components/Asset.vue";
-import assetServices from "../services/assetServices.js";
-import { watchEffect } from "vue";
 /////lesson 1 Routing
 /// we need to tell the component that we will pass it a parameter called page
 export default {
@@ -38,37 +35,14 @@ export default {
   components: {
     Asset,
   },
-  data() {
-    return {
-      assets: null,
-      totalEvents: 0,
-    };
-  },
   created() {
-    // now when we change the page in the component the api should be called again
-    watchEffect(() => {
-      // this will clear out the events in tghe page
-      this.assets = null;
-      assetServices
-        .getAssets(2, this.page)
-        .then((response) => {
-          console.log(response.data);
-          this.assets = response.data;
-          this.totalEvents = response.headers["x-total-count"];
-          console.log(this.totalEvents);
-        })
-        .catch((err) => {
-          console.log(err);
-          this.$router.push({
-            name: "NetworkError",
-          });
-        });
-    });
+    this.$store.dispatch("fetchAssets");
   },
   computed: {
-    hasNextPage() {
-      var totalPages = Math.ceil(this.totalEvents / 2);
-      return this.page < totalPages;
+    assets() {
+      console.log(this.$store.state.assets);
+
+      return this.$store.state.assets;
     },
   },
 };

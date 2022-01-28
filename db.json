@@ -1,29 +1,14 @@
 {
   "assets": [
     {
-      "center": {
-        "lat": 47.060622,
-        "lng": 15.469001
-      },
-      "paymentProvider": {
-        "mangopayId": "1540832285",
-        "mangopayWalletId": "1540832290"
-      },
       "currentImage": 0,
-      "_id": "6156002611ec0cfc1b273b1d",
       "id": "TEST-ASSET",
       "title": "TEST, Plüddemanngasse 101, 8010 Graz",
-      "location": "Graz, Österreich",
       "address": "Plüddemanngasse 101, Top 4",
-      "postalCode": "8010",
-      "stage": "deactivated",
-      "url": "https://bwrealestate.app.brickwise.att",
       "rentalReturn": 8378.71,
       "sharePrice": 3.1,
       "bricks": 10,
       "availableBricks": 0,
-      "rentalPaymentDate": 15,
-      "campaignDate": "30.10.2021",
       "images": [
         {
           "_id": "6154071d60d54163693e17a7",
@@ -41,39 +26,17 @@
           "_id": "6154071d60d541f9833e17aa",
           "src": "https://cdn.brickwise.at/a817dfb0-b9c8-402b-b6a4-1c4880950a2f.jpg"
         }
-      ],
-      "ISIN": "AT0000A2RAH5",
-      "investmentConditionsUrl": "https://cdn.brickwise.at/95cd4c95-c64f-4495-ac1a-6482d2f463c9.pdf",
-      "testing": false,
-      "createdAt": "2021-09-30T18:21:26.721Z",
-      "updatedAt": "2021-09-30T19:19:07.302Z",
-      "__v": 0,
-      "tokenId": "HWSCewEfobVH7wTYh63t1wwPgmj5Qzcqz9YZLij5SRi4"
+      ]
     },
     {
-      "center": {
-        "lat": 47.060622,
-        "lng": 15.469001
-      },
-      "paymentProvider": {
-        "mangopayId": "1848553105",
-        "mangopayWalletId": "1951549668"
-      },
       "currentImage": 0,
-      "_id": "61560800d056dd9d1e8605c6",
       "id": "AT0000A2RAH5",
       "title": "Wohnung, Plüddemanngasse 101, Graz",
-      "location": "Graz, Österreich",
       "address": "Plüddemanngasse 101, Top 4",
-      "postalCode": "8010",
-      "stage": "secondary",
-      "url": "https://bwrealestate.app.brickwise.at",
       "rentalReturn": 2.36,
       "sharePrice": 110,
       "bricks": 1000,
       "availableBricks": 0,
-      "rentalPaymentDate": 15,
-      "campaignDate": "05.11.2021",
       "images": [
         {
           "_id": "61b228fb5743136ae039988d",
@@ -107,39 +70,17 @@
           "_id": "61b228fb57431333c6399894",
           "src": "https://cdn.brickwise.at/848b736a-0f5a-4312-8f63-26db8496dfd5.jpg"
         }
-      ],
-      "ISIN": "AT0000A2RAH5",
-      "investmentConditionsUrl": "https://cdn.brickwise.at/95cd4c95-c64f-4495-ac1a-6482d2f463c9.pdf",
-      "testing": false,
-      "createdAt": "2021-09-30T18:54:56.552Z",
-      "updatedAt": "2022-01-09T12:13:31.329Z",
-      "__v": 0,
-      "tokenId": "GupTM6Xko1NUpNXbQZZ5TQNeP2owrfSvund4t2hSZY7a"
+      ]
     },
     {
-      "center": {
-        "lat": 48.1803236,
-        "lng": 16.3609063
-      },
-      "paymentProvider": {
-        "mangopayId": "1848623804",
-        "mangopayWalletId": "2018962506"
-      },
       "currentImage": 0,
-      "_id": "61560822d056dd39718605da",
       "id": "AT0000A2T4D7",
       "title": "Wohnung, Sonnleithnergasse 2, Wien 10.",
-      "location": "Wien, Österreich",
       "address": "Sonnleithnergasse 2, Top 247",
-      "postalCode": "1100",
-      "stage": "secondary",
-      "url": "https://bwrealestate.app.brickwise.at",
       "rentalReturn": 2.08,
       "sharePrice": 115,
       "bricks": 2350,
       "availableBricks": 0,
-      "rentalPaymentDate": 15,
-      "campaignDate": "30.11.2021",
       "images": [
         {
           "_id": "61b2297557431310303998da",
@@ -161,35 +102,17 @@
           "_id": "61b22975574313a9f73998de",
           "src": "https://cdn.brickwise.at/5feff272-d44b-4f05-a335-621543da4087.jpg"
         }
-      ],
-      "ISIN": "AT0000A2T4D7",
-      "investmentConditionsUrl": "https://cdn.brickwise.at/7e231bda-60c6-4f9b-8c92-7ce360f9937b.pdf",
-      "testing": false,
-      "createdAt": "2021-09-30T18:55:30.264Z",
-      "updatedAt": "2022-01-09T09:26:08.754Z",
-      "__v": 0,
-      "tokenId": "EikNS1JmZ8MhqarhXbh96BVMtf6NNWbRVHedaKiPZCra"
+      ]
     },
     {
-      "center": {
-        "lat": 46.621171,
-        "lng": 14.2661673
-      },
       "currentImage": 0,
-      "_id": "61a696fa6f8635fc4b333a84",
       "id": "AT0000A2U5V3",
       "title": "Trafik, Kohldorferstrasse 102, Klagenfurt",
-      "location": "Klagenfurt, Österreich",
       "address": "Kohldorferstrasse 102, Top Gewerbe 2",
-      "postalCode": "9020",
-      "stage": "primary",
-      "url": "https://bwrealestate.app.brickwise.at",
       "rentalReturn": 3.15,
       "sharePrice": 100.02,
       "bricks": 3600,
       "availableBricks": 1689,
-      "rentalPaymentDate": 15,
-      "campaignDate": "15/01/2022",
       "images": [
         {
           "_id": "61b229b757431321463998f6",
@@ -211,34 +134,17 @@
           "_id": "61b229b75743137cbb3998fa",
           "src": "https://cdn.brickwise.at/5ed9c1a5-d186-4a24-8abe-9a43048af0e7.jpg"
         }
-      ],
-      "ISIN": "AT0000A2U5V3",
-      "investmentConditionsUrl": "https://cdn.brickwise.at/99516b4f-7dc8-440b-b125-41046a1249ef.pdf",
-      "testing": false,
-      "createdAt": "2021-11-30T21:26:18.421Z",
-      "updatedAt": "2022-01-09T09:40:24.132Z",
-      "__v": 0
+      ]
     },
     {
-      "center": {
-        "lat": 46.621171,
-        "lng": 14.2661673
-      },
       "currentImage": 0,
-      "_id": "61a696fa6f8635fc4b333a84",
       "id": "AT00005V3",
       "title": "Wohnung im Grüne, Währing",
-      "location": "Wien, Österreich",
       "address": "Währinger straße 139, Wien, 1180",
-      "postalCode": "1180",
-      "stage": "primary",
-      "url": "https://bwrealestate.app.brickwise.at",
       "rentalReturn": 4.15,
       "sharePrice": 120.02,
       "bricks": 3600,
       "availableBricks": 1689,
-      "rentalPaymentDate": 15,
-      "campaignDate": "15/01/2022",
       "images": [
         {
           "_id": "61b229b757431321468f6",
@@ -260,13 +166,39 @@
           "_id": "61b229b75743137cbb3fa",
           "src": "https://cdn.brickwise.at/5ed9c1a5-d186-4a24-8abe-9a43048af0e7.jpg"
         }
-      ],
-      "ISIN": "AT0000A2U5V3",
-      "investmentConditionsUrl": "https://cdn.brickwise.at/99516b4f-7dc8-440b-b125-41046a1249ef.pdf",
-      "testing": false,
-      "createdAt": "2021-11-30T21:26:18.421Z",
-      "updatedAt": "2022-01-09T09:40:24.132Z",
-      "__v": 0
+      ]
+    },
+    {
+      "currentImage": 0,
+      "id": "AT000V3",
+      "title": "Wohnung am Donau, Währing",
+      "address": "Spittlauer Platz 5, Wien, 1090",
+      "rentalReturn": 5.15,
+      "sharePrice": 150.02,
+      "bricks": 3600,
+      "availableBricks": 1689,
+      "images": [
+        {
+          "_id": "61b229b75743132146",
+          "src": "https://cdn.brickwise.at/557c0021-da6f-4bea-b0cd-b440021da7b1.jpg"
+        },
+        {
+          "_id": "61b229b7574313a3998",
+          "src": "https://cdn.brickwise.at/9ee571fb-5fec-48ff-82fd-2db86af93769.jpg"
+        },
+        {
+          "_id": "61b229b757431323998",
+          "src": "https://cdn.brickwise.at/1e547902-a465-43c9-9d92-7c833c4f9147.jpg"
+        },
+        {
+          "_id": "61b229b7574313633998",
+          "src": "https://cdn.brickwise.at/d4ccd62c-258e-4fad-9fcd-35ba9029a5cf.jpg"
+        },
+        {
+          "_id": "61b229b75743137cbb3",
+          "src": "https://cdn.brickwise.at/5ed9c1a5-d186-4a24-8abe-9a43048af0e7.jpg"
+        }
+      ]
     }
   ]
 }

@@ -7,6 +7,7 @@ import register from "../views/AssetViews/register.vue";
 import layout from "../views/AssetViews/layout.vue";
 import NotFound from "../views/NotFound.vue";
 import NetworkError from "../views/NetworkError.vue";
+import NPprogess from "nprogress";
 const routes = [
   {
     path: "/marketplace",
@@ -50,11 +51,13 @@ const routes = [
         path: "register",
         name: "register",
         component: register,
+        meta: { requireAuth: true },
       },
       {
         path: "edit",
         name: "edit",
         component: edit,
+        meta: { requireAuth: true },
       },
     ],
   },
@@ -80,6 +83,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;
+router.beforeEach(() => {
+  NPprogess.start();
+});
+router.afterEach(() => {
+  NPprogess.done();
+});

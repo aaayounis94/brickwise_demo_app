@@ -1,18 +1,11 @@
 <template>
-  <div class="flashMessage" v-if="GlobalStore.flashMessage">
-    {{ GlobalStore.flashMessage }}
-  </div>
   <div id="nav">
     <router-link :to="{ name: 'Marketplace' }">Marketplace</router-link> |
     <router-link :to="{ name: 'Portfolio' }">Portfolio</router-link>
   </div>
   <router-view />
 </template>
-<script>
-export default {
-  inject: ["GlobalStore"],
-};
-</script>
+<script></script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

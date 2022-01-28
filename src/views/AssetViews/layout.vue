@@ -10,35 +10,15 @@
 </template>
 
 <script>
-import assetServices from "../../services/assetServices.js";
 export default {
   props: ["id"],
-  data() {
-    return {
-      asset: null,
-    };
-  },
-  // when the component is created fetsh the event data with ID
   created() {
-    assetServices
-      .getAsset(this.id)
-      .then((response) => {
-        console.log(response.data);
-        this.asset = response.data;
-      })
-      .catch((err) => {
-        if (err.response & (err.response.status === "404")) {
-          this.router.push({
-            name: "NotFound",
-            params: { resource: "property" },
-          });
-        } else {
-          this.$router.push({
-            name: "NetworkError",
-          });
-        }
-        console.error(err);
-      });
+    this.$store.dispatch("fetchAsset", this.id);
+  },
+  computed: {
+    asset() {
+      return this.$store.state.asset;
+    },
   },
 };
 </script>
